@@ -1,7 +1,7 @@
 • Item 1: Build the functions as follows:
 - void InputArray_1D(int*& a, int& n): allocate a ID integer array with n items
--  void FreeArray_ID(int*& a): free array
--  void OutputArray_ID(int* a, int n): print n items in ID integer array
+-  void FreeArray_1D(int*& a): free array
+-  void OutputArray_1D(int* a, int n): print n items in ID integer array
 -  void main(): demonstrate how to use
 
 • Item 2: Write main to demonstrate
