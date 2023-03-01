@@ -5,7 +5,7 @@ using namespace std;
 void InputArray_1D(int*& a, int& n);
 void FreeArray_1D(int*& a);
 void OutputArray_1D(int* a, int n);
-void CreateMatrix(int** &a, int& n, istream& input);
+void CreateMatrix(int**& a, int& n, istream& input);
 void PrintMatrix(int** a, int& n, ostream& output);
 void FreeMatrix(int**& a, int& n);
 
@@ -51,12 +51,13 @@ void FreeArray_1D(int*& a)
 
 void OutputArray_1D(int* a, int n)
 {
+    cout << "\nMang da nhap la:" << endl;
     for (int i = 0; i < n; i++)
         cout << a[i] << '\t';
     cout << "\n";
 }
 
-void CreateMatrix(int** &a, int &n, istream& input)
+void CreateMatrix(int**& a, int& n, istream& input)
 {
     cout << "Nhap n: ";
     input >> n;
@@ -68,11 +69,12 @@ void CreateMatrix(int** &a, int &n, istream& input)
     if (a == NULL) return;
 
     for (int i = 0; i < n; i++)
+    {
         a[i] = new int[n];
+        if (a[i] == NULL) return;
+    }
 
-    if (a == NULL) return;
-
-    cout << "Nhap mang 2 chieu: ";
+    cout << "Nhap mang 2 chieu:\n";
 
     for (int i = 0; i < n; i++)
         for (int j = 0; j < n; j++)
