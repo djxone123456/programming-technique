@@ -65,8 +65,12 @@ void CreateMatrix(int** &a, int &n, istream& input)
 
     a = new int* [n];
 
+    if (a == NULL) return;
+
     for (int i = 0; i < n; i++)
         a[i] = new int[n];
+
+    if (a == NULL) return;
 
     cout << "Nhap mang 2 chieu: ";
 
